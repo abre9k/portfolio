@@ -1,0 +1,205 @@
+/* ---------- Grundlayout ---------- */
+html, body{font-family:Roboto,sans-serif;
+color:#333;
+margin:0;
+background-color:#000000;
+}
+.container{
+margin: 0 auto;
+max-width:600px;
+padding:1rem;
+}
+h1{text-align:center;
+color:#1a1a1a;
+}
+.untertitel{text-align:center;
+margin-top:-.5rem;
+color:#555;
+}
+.profilbild{display:block;
+margin:1rem auto 2rem;
+width:20%;
+max-width:300px;
+border-radius:6px;
+box-shadow:0 4px 8px rgba(0,0,0,.1);
+}
+
+/* ---------- Tiles ---------- */
+
+.tile{
+background:rgba(234,234,234,.8);
+border-radius:12px;
+padding:1.5rem;
+margin-bottom:1.5rem;
+box-shadow:0 2px 6px rgba(0,0,0,.05);
+opacity:0;
+transform:translateY(20px);
+animation:fadeIn .6s ease forwards;
+animation-delay:var(--delay,0s);
+transition:transform .2s ease, box-shadow .2s ease, background-color .1s;
+}
+.tile.hovered{transform:translateY(0) scale(1.02);
+box-shadow:0 4px 12px rgba(0,0,0,.15);
+background:#E4E4E4;
+}
+@keyframes fadeIn{to{opacity:1;
+transform:translateY(0);
+}}
+.tile h2{text-align:center;
+}
+
+/* List-Bullets nur in normalen Tiles */
+.tile ul{list-style:none;
+padding-left:0;
+}
+.tile ul:not(.contact-list)>li{
+position:relative;
+padding-left:1.5rem;
+margin-bottom:.8rem;
+transition:transform .2s ease;
+transform-origin:left;
+}
+.tile ul:not(.contact-list)>li::before{
+content:"•";
+position:absolute;
+left:0;
+top:0;
+font-size:1.2rem;
+color:#000;
+transition:transform .2s ease;
+}
+.tile ul:not(.contact-list)>li:hover{transform:scale(1.01);
+}
+.tile ul:not(.contact-list)>li:hover::before{transform:scale(1.01);
+}
+
+/* ---------- Links (allgemein) ---------- */
+.tile li a,
+.contact-row a{color:#0077cc;
+text-decoration:none;
+display:inline-block;
+transform-origin:left center;
+transition:color .2s ease, transform .2s ease;
+}
+.tile li a:hover,
+.contact-row a:hover{color:#003366;
+text-decoration:underline;
+transform:scale(1.01);
+}
+
+/* ---------- Kontakt ---------- */
+.contact-list{list-style:none;
+padding-left:0;
+margin:0;
+}
+.contact-row{display:grid;
+grid-template-columns:max-content auto;
+gap:.5rem 1rem;
+align-items:center;
+}
+.contact-row span{font-weight:600;
+}
+
+/* ---------- Tag ---------- */
+.tag{font-size:.8em;
+color:#666;
+margin-left:.3em;
+font-style:italic;
+}
+
+/* ---------- Back-to-Top ---------- */
+#backToTop{position:fixed;
+bottom:30px;
+right:30px;
+z-index:100;
+width:48px;
+height:48px;
+background:#6fb4e6;
+color:#fff;
+border:none;
+border-radius:20%;
+cursor:pointer;
+box-shadow:0 2px 6px rgba(0,0,0,.2);
+opacity:0;
+pointer-events:none;
+transition:opacity .6s ease, background .3s ease, transform .3s ease;
+}
+#backToTop.visible{opacity:1;
+pointer-events:auto;
+}
+#backToTop:hover{background:#005999;
+transform:scale(1.1);
+}
+
+/* ---------- Hamburger-Menü ---------- */
+.hamburger-menu{position:fixed;
+top:20px;
+left:20px;
+z-index:999;
+}
+#menu-toggle{font-size:2rem;
+background:none;
+border:none;
+color:#6fb4e6;
+cursor:pointer;
+}
+.menu-list{list-style:none;
+background:#eaeaea;
+border-radius:3px;
+padding:1rem;
+width:200px;
+margin-top:.5rem;
+box-shadow:0 2px 6px rgba(0,0,0,.1);
+}
+.menu-list li{margin-bottom:.8rem;
+padding-bottom:.5rem;
+border-bottom:1px solid rgba(0,0,0,.1);
+}
+.menu-list li:last-child{margin-bottom:0;
+padding-bottom:0;
+border-bottom:none;
+}
+.menu-list a{text-decoration:none;
+color:#0077cc;
+}
+.menu-list a:hover{color:#003366;
+text-decoration:underline;
+}
+.hidden{display:none;
+}
+
+/* ---------- Footer ---------- */
+.footer{
+text-align:center;
+font-size:.9rem;
+color:#666;
+text-align:center;
+margin-top:auto;
+padding:0.5rem 0 0.5rem;
+border-top:1px solid #ccc;
+}
+
+/* ---------- Sticky-Footer ---------- */
+html, body{height:100%;
+}
+body{display:flex;
+flex-direction:column;
+}
+.container{flex:1 0 auto;
+}
+
+/* ---------- Intro-Kachel: dauerhaft hellgrau, ohne Zoom ---------- */
+.intro-tile{
+  background:#E4E4E4 !important;      /* hellgrau von Anfang an */
+  opacity:1 !important;               /* kein Fade-In */
+  transform:none !important;          /* kein Anfangsversatz */
+  animation:none !important;          /* Fade-In abgeschaltet */
+  transition:none !important;         /* gar kein Übergang */
+}
+
+.intro-tile:hover,
+.intro-tile.hovered{
+  background:#E4E4E4 !important;      /* bleibt hellgrau */
+  transform:none !important;          /* kein Zoom */
+  box-shadow:0 2px 6px rgba(0,0,0,.05);/* dezenter Fix-Schatten */
+}
