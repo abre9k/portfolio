@@ -170,13 +170,18 @@ text-decoration:underline;
 
 /* ---------- Footer ---------- */
 .footer{
-text-align:center;
-font-size:.9rem;
-color:#666;
-text-align:center;
-margin-top:auto;
-padding:0.5rem 0 0.5rem;
-border-top:1px solid #ccc;
+  display:flex;                   /* vertikale + horizontale Zentrierung */
+  align-items:center;
+  justify-content:center;
+
+  font-size:.9rem;
+  color:#666;                     /* hell auf dunklem Hintergrund */
+  text-align:center;
+
+  padding:2rem 0;                 /* ↑ 2 rem oben & unten = doppelte Höhe */
+
+  margin-top:auto;                /* Sticky-Footer bleibt */
+  border-top:1px solid #ccc;
 }
 
 /* ---------- Sticky-Footer ---------- */
