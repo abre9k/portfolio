@@ -127,8 +127,8 @@ transition:opacity .6s ease, background .3s ease, transform .3s ease;
 #backToTop.visible{opacity:1;
 pointer-events:auto;
 }
-#backToTop:hover{background:#005999;
-transform:scale(1.1);
+#backToTop:hover{
+transform:scale(1.05);
 }
 
 /* ---------- Hamburger-Menü ---------- */
@@ -166,6 +166,10 @@ color:#0077cc;
 text-decoration:underline;
 }
 .hidden{display:none;
+}
+/* Hamburger-Button Hover-Effekt */
+#menu-toggle:hover {
+  transform: scale(1.05);
 }
 
 /* ---------- Footer ---------- */
