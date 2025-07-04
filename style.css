@@ -6,7 +6,7 @@ background-color:#000000;
 }
 .container{
 margin: 0 auto;
-max-width: 600px;
+max-width:800px;
 padding:1rem;
 }
 h1{text-align:center;
@@ -114,7 +114,7 @@ right:30px;
 z-index:100;
 width:48px;
 height:48px;
-background:#6fb4e6;
+background:#3498db;
 color:#fff;
 border:none;
 border-radius:20%;
@@ -140,7 +140,7 @@ z-index:999;
 #menu-toggle{font-size:2rem;
 background:none;
 border:none;
-color:#6fb4e6;
+color:#3498db;
 cursor:pointer;
 }
 .menu-list{list-style:none;
@@ -170,18 +170,13 @@ text-decoration:underline;
 
 /* ---------- Footer ---------- */
 .footer{
-  display:flex;                   /* vertikale + horizontale Zentrierung */
-  align-items:center;
-  justify-content:center;
-
-  font-size:.9rem;
-  color:#666;                     /* hell auf dunklem Hintergrund */
-  text-align:center;
-
-  padding:2rem 0;                 /* ↑ 2 rem oben & unten = doppelte Höhe */
-
-  margin-top:auto;                /* Sticky-Footer bleibt */
-  border-top:1px solid #ccc;
+text-align:center;
+font-size:.9rem;
+color:#666;
+text-align:center;
+margin-top:auto;
+padding:0.5rem 0 0.5rem;
+border-top:1px solid #ccc;
 }
 
 /* ---------- Sticky-Footer ---------- */
@@ -207,4 +202,9 @@ flex-direction:column;
   background:#E4E4E4 !important;      /* bleibt hellgrau */
   transform:none !important;          /* kein Zoom */
   box-shadow:0 2px 6px rgba(0,0,0,.05);/* dezenter Fix-Schatten */
+}
+
+
+header.intro-tile{
+  padding:2rem 1rem;
 }
