@@ -51,4 +51,9 @@ const tiles = document.querySelectorAll(".tile:not(.intro-tile)");
       }
     }
   });
+  // Seite springt zurück nach oben beim neuladen
+  window.addEventListener('load', () => {
+  setTimeout(() => window.scrollTo(0, 0), 0);
+  });
+
 });
