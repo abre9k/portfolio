@@ -1,4 +1,7 @@
 /* ---------- Grundlayout ---------- */
+html {
+  scroll-behavior: smooth;
+}
 html, body{font-family:Roboto,sans-serif;
 color:#333;
 margin:0;
