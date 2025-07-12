@@ -211,7 +211,7 @@ body::before {
             top: 20px;
             left: 20px;
             z-index: 999;
-            width: 900px;
+            width: 700px;
 
         }
         .menu-list {
@@ -256,11 +256,12 @@ body::before {
             color: #08793d;
         }
 
-
         /* Hamburger-Button Hover-Effekt */
         #menu-toggle:hover {
             transform: scale(1.05);
         }
+
+
 
         /* ---------- Footer ---------- */
         .footer {
