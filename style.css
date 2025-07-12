@@ -10,12 +10,15 @@ html {
 }
 
 body {
-            background: repeating-linear-gradient(
-              to bottom,
-              #20232A 0px,
-              #161a23 1200px,
-              #20232A 2400px);
-     }
+  background: linear-gradient(
+    to bottom,
+    #20232A 0%,
+    #1d1f27 20%,
+    #161a23 50%,
+    #1d1f27 80%,
+    #20232A 100%
+  );
+}
         html,
         body {
             font-family: Roboto, sans-serif;
