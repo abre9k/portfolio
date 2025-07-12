@@ -17,8 +17,7 @@ html {
             height: 100%;
             margin: 0;
             padding: 0;
-        }
-background: repeating-linear-gradient(
+                    background: repeating-linear-gradient(
   to bottom,
   #20232A 0px,
   #181b24 200px,
@@ -26,6 +25,8 @@ background: repeating-linear-gradient(
   #181b24 600px,
   #20232A 800px
 );
+        }
+
 
         .container {
             margin: 0 auto;
