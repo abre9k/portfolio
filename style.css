@@ -10,16 +10,14 @@ html {
 }
 
 body {
-  background: linear-gradient(
+  background: repeating-linear-gradient(
     to bottom,
-    #20232A 0%,
-    #1d1f27 50%,
-    #161a23 100%
+    #20232A 0px,
+    #1d1f27 600px,
+    #161a23 1200px,
+    #1d1f27 1800px,
+    #20232A 2400px
   );
-  background-repeat: no-repeat;
-  background-attachment: scroll; /* <- not fixed! */
-  background-size: 100% auto; /* Let it grow with content height */
-  min-height: 100vh;
   margin: 0;
 }
         html,
@@ -292,6 +290,8 @@ body {
             /* Fade-In abgeschaltet */
             transition: none !important;
             /* gar kein Übergang */
+            margin-top: 1.5rem;
+
         }
 
 
