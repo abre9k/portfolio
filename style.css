@@ -13,10 +13,8 @@ body {
   background: linear-gradient(
     to bottom,
     #20232A 0%,
-    #1d1f27 20%,
-    #161a23 50%,
-    #1d1f27 80%,
-    #20232A 100%
+    #1d1f27 50%,
+    #161a23 100%
   );
 }
         html,
