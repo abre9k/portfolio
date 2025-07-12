@@ -10,10 +10,17 @@ html {
 }
 
 body {
-  min-height: 100vh;
-  background: linear-gradient(to bottom, #20232A, #161a23);
+  background: linear-gradient(
+    to bottom,
+    #20232A 0%,
+    #1d1f27 50%,
+    #161a23 100%
+  );
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-attachment: scroll; /* <- not fixed! */
+  background-size: 100% auto; /* Let it grow with content height */
+  min-height: 100vh;
+  margin: 0;
 }
         html,
         body {
