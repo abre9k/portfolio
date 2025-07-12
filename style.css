@@ -240,10 +240,6 @@ html {
             color: #08793d;
         }
 
-        .hidden {
-            display: none;
-        }
-
         /* Hamburger-Button Hover-Effekt */
         #menu-toggle:hover {
             transform: scale(1.05);
