@@ -300,7 +300,7 @@ body::before {
             /* Fade-In abgeschaltet */
             transition: none !important;
             /* gar kein Übergang */
-            margin-top: 1.5rem;
+            margin-top: 0.75rem;
 
         }
 
