@@ -9,12 +9,12 @@ html {
     display: none;
 }
 
-body {background: repeating-linear-gradient(
-  to bottom,
-  #20232A 0px,
-  #161a23 600px,
-  #20232A 1200px
-);
+body {
+            background: repeating-linear-gradient(
+              to bottom,
+              #20232A 0px,
+              #161a23 1200px,
+              #20232A 2400px);
      }
         html,
         body {
