@@ -18,6 +18,14 @@ html {
             margin: 0;
             padding: 0;
         }
+background: repeating-linear-gradient(
+  to bottom,
+  #20232A 0px,
+  #181b24 200px,
+  #161a23 400px,
+  #181b24 600px,
+  #20232A 800px
+);
 
         .container {
             margin: 0 auto;
