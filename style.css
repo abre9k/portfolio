@@ -9,23 +9,21 @@ html {
     display: none;
 }
 
+body {background: repeating-linear-gradient(
+  to bottom,
+  #20232A 0px,
+  #161a23 600px,
+  #20232A 1200px
+);
+     }
         html,
         body {
             font-family: Roboto, sans-serif;
             color: #000000;
             margin: 0;
             height: 100%;
-            margin: 0;
             padding: 0;
-background: repeating-linear-gradient(
-  to bottom,
-  #20232A 0px,
-  #20232A 300px,
-  #181b24 500px,
-  #161a23 800px,
-  #181b24 1100px,
-  #20232A 1400px
-);
+
         }
 
 
