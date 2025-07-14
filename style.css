@@ -37,9 +37,10 @@ body::before {
         }
 
 
-        .container {
+            .container {
             margin: 0 auto;
-            width: 800px;
+            width: 100%;
+            max-width: 800px;
             padding: 1rem;
         }
 
