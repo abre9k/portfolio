@@ -37,41 +37,48 @@
       background: #fbfbfb;
       border: 1px solid #ccc;
       border-radius: 4px;
-      /* display: flex;
-      flex-direction: column; */
-      /* justify-content: center; */
-      /* align-items: center; */
       text-align: left;
-      /* aspect-ratio: 1 / .7; */
       padding: 10px 30px;
       max-width: 720px;
       min-height: 500px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+      /* Fade-in beim Laden / Scrollen */
       opacity: 0;
-      transform: scale(1);
-      transition: opacity 3s ease, transform 3s ease, background-color 1s ease;
+      transform: translateY(20px) scale(1);
+      /* Startpunkt für Animation */
+      transition: opacity 1.2s ease, transform 1.2s ease, box-shadow 0.3s ease;
       animation-delay: var(--delay, 0s);
     }
 
-
+    /* Fade-in sichtbar */
     .tile.visible {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
     }
 
+    /* Hover-Effekt für das Tile selbst */
+    .tile:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Links innerhalb der Tiles */
     .tile li a,
     .contact-row a {
       color: #0077ccdc;
       text-decoration: none;
       display: inline-block;
       transform-origin: left center;
-      transition: color .2s ease, transform .2s ease;
+
+      /* Transition nur für Link-Hover */
+      transition: color 0.2s ease, transform 0.2s ease;
     }
 
+    /* Hover-Effekt der Links */
     .tile li a:hover,
     .contact-row a:hover {
       color: #0095ffdc;
-      text-decoration: none;
       transform: scale(1.01);
     }
 
