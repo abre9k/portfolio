@@ -15,7 +15,7 @@ body {
   width: 90%;
   margin: 40px auto;
   padding: 50px 0;
-  justify-content: start;
+  justify-items: center;
 }
 
 /* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
@@ -29,13 +29,6 @@ body {
     justify-content: center;
   }
 }
-
-/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
-/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
-/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
-/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
-/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
-/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
 
 
 
@@ -292,11 +285,20 @@ ul {
   margin: auto;
 }
 
-.youtube-container {
-  max-width: 1000px;
-  /* wie Galerie */
-  margin: auto;
+
+/* Tile bleibt gleich breit wie die anderen Tiles */
+.videoproduktion {
+  max-width: 720px; /* gleiche max. Breite wie andere Tiles */
+  width: 100%;      /* füllt das Tile aus */
+  justify-self: center; /* zentriert das Tile, wenn nur 1 pro Reihe */
 }
+
+/* YouTube-Container passt sich dem Tile an */
+.youtube-container {
+  width: 100%;
+  margin: 20px 0;
+}
+
 
 .yt-wrapper {
   position: relative;
@@ -320,6 +322,9 @@ iframe {
   border-radius: 4px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+
+
+
 
 /* ---------- Back-to-Top ---------- */
 #backToTop {
