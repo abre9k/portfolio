@@ -15,7 +15,28 @@ body {
   width: 90%;
   margin: 40px auto;
   padding: 50px 0;
+  justify-content: start;
 }
+
+/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
+/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
+/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
+/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
+/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
+/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
+@media (max-width: 540px) {
+  .container {
+    justify-content: center;
+  }
+}
+
+/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
+/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
+/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
+/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
+/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
+/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
+
 
 
 .tile {
