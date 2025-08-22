@@ -18,20 +18,6 @@ body {
   justify-items: center;
 }
 
-/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
-/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
-/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
-/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
-/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
-/* Bei kleiner Breite: nur 1 Tile pro Reihe → zentrieren */
-@media (max-width: 540px) {
-  .container {
-    justify-content: center;
-  }
-}
-
-
-
 .tile {
   background: #fbfbfb;
   border: 1px solid #ccc;
