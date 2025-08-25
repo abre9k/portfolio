@@ -406,21 +406,14 @@ iframe {
 }
 
 
-.skills-container {
-    width: 90%;
-  margin: 40px auto;
-  padding: 50px 0px;
-}
-
 .skills {
+  width: 100%;
+  max-width: 720px;
   background: #fcfcfc;
-  border: 1px solid #ccc;
   border-radius: 4px;
   text-align: left;
   padding: 10px 30px;
   min-height: 500px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  margin-top: -80px;
 }
 
 .skills>.text {
@@ -433,10 +426,10 @@ iframe {
   margin: 1rem 0;
 }
 
-.skills .item {
+/* .skills .item {
   padding: 0.5rem 0;
-  margin: 0.3rem 0;
-}
+margin: 0.3rem 0; } */
+
 
 .skills .item-text {
   display: flex;
@@ -479,12 +472,12 @@ iframe {
   border-radius: 10px;
   height: 16px;
   width: 100%;
-  background-color: grey;
+  background-color: rgb(229, 229, 229);
   overflow: hidden;
 }
 
 .progress-bar {
-  background: green;
+  background: #4678C0;
   height: 100%;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
