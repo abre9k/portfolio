@@ -31,9 +31,8 @@ body {
   /* Fade-in beim Laden / Scrollen */
   opacity: 0;
   transform: translateY(20px) scale(1);
-  /* Startpunkt für Animation */
   transition: opacity 1.2s ease, transform 1.2s ease, box-shadow 0.3s ease;
-  animation-delay: var(--delay, 0s);
+  /* animation-delay: var(--delay, 0s); */
 }
 
 /* Fade-in sichtbar */
