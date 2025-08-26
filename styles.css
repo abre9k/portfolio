@@ -82,6 +82,11 @@ h2 {
   color: #333;
 }
 
+.item {
+  margin-bottom: 1rem;
+}
+
+
 ul {
   list-style-type: none;
   padding-left: 0;
@@ -435,7 +440,7 @@ margin: 0.3rem 0; } */
   display: flex;
   justify-content: flex-start;
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   position: relative;
 }
 
@@ -443,66 +448,71 @@ margin: 0.3rem 0; } */
   position: absolute;
 }
 
-.skills .item-text .w-90 {
-  margin-left: 85%;
+/* Rechtschreibung & Textbearbeitung */
+.skills .item-text .w-99 {
+  margin-left: 95%;
 }
 
-.skills .item-text .w-75 {
-  margin-left: 70%;
-}
-
+/* Texten */
 .skills .item-text .w-85 {
-  margin-left: 80%;
+  margin-left: 95%;
 }
 
-.skills .item-text .w-80 {
-  margin-left: 75%;
+/* Audio */
+.skills .item-text .w-75 {
+  margin-left: 95%;
 }
 
-.skills .item-text .w-60 {
-  margin-left: 55%;
+/* Video */
+.skills .item-text .w-50 {
+  margin-left: 95%;
 }
 
-.skills .item-text .w-68 {
-  margin-left: 63%;
+/* Social Media & SEO */
+.skills .item-text .w-50 {
+  margin-left: 95%;
+}
+
+/* HTML5 & CSS3 */
+.skills .item-text .w-25 {
+  margin-left: 95%;
 }
 
 .progress {
-  margin: 0.8rem 0;
+  /* margin: 0.8rem 0; */
+  margin-top: 0.6rem;
+  margin-bottom: 0.8rem;
   border-radius: 10px;
-  height: 16px;
+  height: 12px;
   width: 100%;
   background-color: rgb(229, 229, 229);
   overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .progress-bar {
-  background: #4678C0;
+  background: #0077ccdc;
   height: 100%;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
 }
 
-.progress-bar.w-90 {
-  width: 90%;
-}
-
-.progress-bar.w-75 {
-  width: 75%;
+.progress-bar.w-99 {
+  width: 99%;
 }
 
 .progress-bar.w-85 {
   width: 85%;
 }
 
-.progress-bar.w-80 {
-  width: 80%;
+.progress-bar.w-75 {
+  width: 75%;
 }
 
-.progress-bar.w-60 {
-  width: 60%;
+.progress-bar.w-50 {
+  width: 50%;
 }
 
-.progress-bar.w-68 {
-  width: 68%;
+.progress-bar.w-25 {
+  width: 25%;
 }
