@@ -496,6 +496,10 @@ margin: 0.3rem 0; } */
   border-bottom-right-radius: 2px;
 }
 
+.progress-item-percent {
+  font-weight: 400;
+}
+
 .progress-bar.w-99 {
   width: 99%;
 }
@@ -514,4 +518,61 @@ margin: 0.3rem 0; } */
 
 .progress-bar.w-25 {
   width: 25%;
+}
+
+
+/* --- Tablet --- */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    /* nur 1 Spalte */
+    gap: 30px;
+    width: 95%;
+    padding: 20px 0;
+  }
+
+  .tile,
+  .skills {
+    max-width: 95%;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .seo-img,
+  .fan-img,
+  .pizza-img {
+    width: 90%;
+    margin: 15px auto;
+    display: block;
+  }
+}
+
+/* --- Smartphone --- */
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr;
+    /* nur 1 Spalte */
+    gap: 30px;
+    width: 95%;
+    padding: 20px 0;
+  }
+
+  .tile,
+  .skills {
+    max-width: 90%;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .skills-item, .progress-item-percent {
+    font-size: 80%;
+  }
+
+  .seo-img,
+  .fan-img,
+  .pizza-img {
+    width: 90%;
+    margin: 15px auto;
+    display: block;
+  }
 }
