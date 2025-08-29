@@ -557,6 +557,15 @@ margin: 0.3rem 0; } */
     padding: 20px 0;
   }
 
+  .soundcloud-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* statt space-between */
+    gap: 2rem;
+    /* gleichmässiger Abstand */
+  }
+
   .tile,
   .skills {
     max-width: 90%;
@@ -564,7 +573,8 @@ margin: 0.3rem 0; } */
     padding: 15px;
   }
 
-  .skills-item, .progress-item-percent {
+  .skills-item,
+  .progress-item-percent {
     font-size: 80%;
   }
 
