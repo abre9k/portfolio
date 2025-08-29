@@ -567,6 +567,9 @@ margin: 0.3rem 0; } */
     /* gleichmässiger Abstand */
   }
 
+  a {    font-size: 90%;
+}
+
   .tile,
   .skills {
     max-width: 90%;
