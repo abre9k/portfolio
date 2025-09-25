@@ -478,7 +478,12 @@ margin: 0.3rem 0; } */
 }
 
 /* HTML5 & CSS3 */
-.skills .item-text .w-25 {
+.skills .item-text .w-40 {
+  margin-left: 95%;
+}
+
+/* HTML5 & CSS3 */
+.skills .item-text .w-30 {
   margin-left: 95%;
 }
 
@@ -521,12 +526,12 @@ margin: 0.3rem 0; } */
   width: 50%;
 }
 
-.progress-bar.w-30 {
-  width: 30%;
+.progress-bar.w-40 {
+  width: 40%;
 }
 
-.progress-bar.w-25 {
-  width: 25%;
+.progress-bar.w-30 {
+  width: 30%;
 }
 
 
