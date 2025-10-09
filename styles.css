@@ -60,10 +60,10 @@ body {
 }
 
 /* Hover-Effekt der Links */
-.tile li a:hover,
+.tile a:hover,
 .contact-row a:hover {
   color: #0095ffdc;
-  transform: scale(1.01);
+  /* transform: scale(1.01); */
 }
 
 
@@ -91,8 +91,7 @@ ul {
   padding-left: 0;
 }
 
-p,
-ul {
+a {
   font-size: 120%;
   font-weight: 500;
 }
@@ -569,7 +568,7 @@ margin: 0.3rem 0; } */
 
   .seo-img,
   .fan-img,
-  .pizza-img {
+  .project-img {
     width: 90%;
     margin: 15px auto;
     display: block;
@@ -619,4 +618,40 @@ margin: 0.3rem 0; } */
     margin: 15px auto;
     display: block;
   }
+}
+
+
+/* --- Webdesign Tile --- */
+.webdesign .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  align-items: start;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.webdesign .project-img {
+  display: block;
+  margin: 10px auto 30px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  max-width: 80%;
+}
+
+/* Webdesign: Links verhalten sich wie .tile li a */
+.webdesign .project a {
+  color: #0077ccdc;
+  text-decoration: none;
+  display: inline-block;
+  transform-origin: left center;
+  transition: color 0.2s ease, transform 0.2s ease;
+  line-height: 1.3;
+}
+
+
+
+.webdesign .project a:hover {
+  color: #0095ffdc;
+  /* transform: scale(1.01); */
 }
