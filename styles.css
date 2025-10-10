@@ -349,7 +349,7 @@ iframe {
   background: #e1f9ff;
   color: #4678C0;
   border: none;
-  border-radius: 20%;
+  border-radius: 4px;
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
   opacity: 0;
