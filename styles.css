@@ -99,7 +99,8 @@ a {
 
 
 .seo-img {
-  width: 33%;
+  width: 40%;
+  height: auto;
   max-width: 800px;
   border-radius: 4px;
   margin: 20px 0 10px 0;
@@ -683,6 +684,9 @@ margin: 0.3rem 0; } */
   border-radius: 4px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   max-width: 80%;
+  cursor: pointer;
+  /* Zeigt die Hand beim Hover */
+
 }
 
 /* Social Media: Links verhalten sich wie .tile li a */
@@ -710,7 +714,7 @@ margin: 0.3rem 0; } */
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   display: none;
   justify-content: center;
   align-items: center;
