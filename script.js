@@ -81,22 +81,75 @@ document.addEventListener("click", (event) => {
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 
-document.querySelectorAll(".social-media .project-img").forEach(img => {
+// --- Social Media Bilder ---
+const socialImages = document.querySelectorAll(".social-media .project-img");
+let socialIndex = 0;
+
+socialImages.forEach((img, index) => {
+  img.style.cursor = "pointer";
   img.addEventListener("click", () => {
+    socialIndex = index;
     lightboxImg.src = img.src;
     lightbox.classList.add("show");
-    document.body.style.overflow = "hidden"; // Scroll blockieren
+    document.body.style.overflow = "hidden";
+    lightbox.dataset.type = "social";
   });
 });
 
-lightbox.addEventListener("click", () => {
-  lightbox.classList.remove("show");
-  document.body.style.overflow = ""; // Scroll wieder erlauben
+// --- Fotografie Carousel Bilder ---
+const carouselImages = document.querySelectorAll(".fotografie .carousel-img");
+let carouselIndex = 0;
+
+carouselImages.forEach((img, index) => {
+  img.style.cursor = "pointer";
+  img.addEventListener("click", () => {
+    carouselIndex = index;
+    lightboxImg.src = img.src;
+    lightbox.classList.add("show");
+    document.body.style.overflow = "hidden";
+    lightbox.dataset.type = "carousel";
+  });
 });
 
+// --- Lightbox schließen beim Klick ausserhalb des Bildes ---
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    lightbox.classList.remove("show");
+    document.body.style.overflow = "";
+    lightbox.dataset.type = "";
+  }
+});
+
+// --- Tastatursteuerung ---
 document.addEventListener("keydown", (e) => {
+  if (!lightbox.classList.contains("show")) return;
+
   if (e.key === "Escape") {
     lightbox.classList.remove("show");
     document.body.style.overflow = "";
+    lightbox.dataset.type = "";
+  }
+
+  if (lightbox.dataset.type === "carousel") {
+    if (e.key === "ArrowRight") {
+      carouselIndex = (carouselIndex + 1) % carouselImages.length;
+      lightboxImg.src = carouselImages[carouselIndex].src;
+    }
+    if (e.key === "ArrowLeft") {
+      carouselIndex = (carouselIndex - 1 + carouselImages.length) % carouselImages.length;
+      lightboxImg.src = carouselImages[carouselIndex].src;
+    }
+  }
+
+  if (lightbox.dataset.type === "social") {
+    if (e.key === "ArrowRight") {
+      socialIndex = (socialIndex + 1) % socialImages.length;
+      lightboxImg.src = socialImages[socialIndex].src;
+    }
+    if (e.key === "ArrowLeft") {
+      socialIndex = (socialIndex - 1 + socialImages.length) % socialImages.length;
+      lightboxImg.src = socialImages[socialIndex].src;
+    }
   }
 });
+
