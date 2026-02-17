@@ -81,53 +81,69 @@ document.addEventListener("click", (event) => {
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 
-// --- Social Media Bilder ---
+// Arrays der Bilder
 const socialImages = document.querySelectorAll(".social-media .project-img");
-let socialIndex = 0;
+const carouselImages = document.querySelectorAll(".fotografie .carousel-img");
 
+// Index merken
+let socialIndex = 0;
+let carouselIndex = 0;
+
+// --- Social Media Bilder ---
 socialImages.forEach((img, index) => {
   img.style.cursor = "pointer";
   img.addEventListener("click", () => {
     socialIndex = index;
     lightboxImg.src = img.src;
     lightbox.classList.add("show");
-    document.body.style.overflow = "hidden";
+
+    // Body fixieren ohne Scrollbar auszublenden
+    const scrollY = window.scrollY;
+    document.body.dataset.scrollY = scrollY;
+    document.body.style.top = `-${scrollY}px`;
+    document.body.classList.add("lightbox-open");
+
     lightbox.dataset.type = "social";
   });
 });
 
 // --- Fotografie Carousel Bilder ---
-const carouselImages = document.querySelectorAll(".fotografie .carousel-img");
-let carouselIndex = 0;
-
 carouselImages.forEach((img, index) => {
   img.style.cursor = "pointer";
   img.addEventListener("click", () => {
     carouselIndex = index;
     lightboxImg.src = img.src;
     lightbox.classList.add("show");
-    document.body.style.overflow = "hidden";
+
+    const scrollY = window.scrollY;
+    document.body.dataset.scrollY = scrollY;
+    document.body.style.top = `-${scrollY}px`;
+    document.body.classList.add("lightbox-open");
+
     lightbox.dataset.type = "carousel";
   });
 });
 
-// --- Lightbox schließen beim Klick ausserhalb des Bildes ---
+// --- Lightbox schließen ---
+function closeLightbox() {
+  lightbox.classList.remove("show");
+  document.body.classList.remove("lightbox-open");
+  const scrollY = parseInt(document.body.dataset.scrollY || "0");
+  document.body.style.top = "";
+  window.scrollTo(0, scrollY);
+  lightbox.dataset.type = "";
+}
+
 lightbox.addEventListener("click", (e) => {
-  if (e.target === lightbox) {
-    lightbox.classList.remove("show");
-    document.body.style.overflow = "";
-    lightbox.dataset.type = "";
-  }
+  if (e.target === lightbox) closeLightbox();
 });
 
-// --- Tastatursteuerung ---
 document.addEventListener("keydown", (e) => {
   if (!lightbox.classList.contains("show")) return;
 
   if (e.key === "Escape") {
-    lightbox.classList.remove("show");
-    document.body.style.overflow = "";
-    lightbox.dataset.type = "";
+    closeLightbox();
+    return;
   }
 
   if (lightbox.dataset.type === "carousel") {
@@ -152,4 +168,3 @@ document.addEventListener("keydown", (e) => {
     }
   }
 });
-
